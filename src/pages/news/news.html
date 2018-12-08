@@ -16,7 +16,7 @@
 <ion-content padding>
 
   <ion-list inset>
-    <ion-item *ngFor="let item of list">
+    <ion-item *ngFor="let item of list" [navPush]='NewscontentPage' [navParams]="{'aid':item.aid}">
       {{item.title}}
     </ion-item>
   </ion-list>

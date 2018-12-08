@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { Http, Jsonp } from '@angular/http';
 
+import { NewscontentPage } from '../newscontent/newscontent';
 /**
  * Generated class for the NewsPage page.
  *
@@ -19,6 +20,7 @@ export class NewsPage {
 
   // list to store data
   public list=[];
+  public NewscontentPage=NewscontentPage;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, public jsonp: Jsonp) {

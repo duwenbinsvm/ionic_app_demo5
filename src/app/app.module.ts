@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ProductPage } from '../pages/product/product';
 import { ShopPage } from '../pages/shop/shop';
 import { NewsPage } from '../pages/news/news';
+import { NewscontentPage } from '../pages/newscontent/newscontent';
 
 import { HttpModule, JsonpModule } from '@angular/http';
 
@@ -26,13 +27,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     ProductPage,
     ShopPage,
-    NewsPage
+    NewsPage,
+    NewscontentPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
     JsonpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      tabsHideOnSubPages: 'true',
+      backButtonText: '返回'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -44,6 +49,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProductPage,
     ShopPage,
     NewsPage,
+    NewscontentPage
   ],
   providers: [
     StatusBar,
